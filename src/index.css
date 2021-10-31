@@ -6,7 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+html, body, #root, .App {
+  height: 100%;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -69,4 +71,38 @@ code {
   grid-area: Contributions; 
   background-color: darkgreen;
 }
+
+
+.projectcontainer {
+  display: grid;
+  grid-template-columns: 0.7fr 1.3fr;
+  grid-template-rows: 0.8fr 1.2fr;
+  gap: 10px 10px;
+  /*grid-auto-flow: row;*/
+  grid-template-areas:
+    "ProjectPicture ProjectDescription"
+    "VersionHistory CurrentVersion";
+  height: 100%;
+}
+
+.ProjectPicture { 
+  grid-area: ProjectPicture; 
+  background-color: deepskyblue;
+}
+
+.ProjectDescription { 
+  grid-area: ProjectDescription; 
+  background-color: dimgrey;
+}
+
+.VersionHistory { 
+  grid-area: VersionHistory; 
+  background-color: firebrick;
+}
+
+.CurrentVersion { 
+  grid-area: CurrentVersion; 
+  background-color: fuchsia;
+}
+
 

@@ -17,7 +17,4 @@ const UserPage = ({props}) => {
     )
 }
 
-const pageStyle = {
-
-}
 export default UserPage;
