@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr 1.1fr;
+  /*grid-template-rows: 0.5fr 1.5fr 0.5fr;*/
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "User Interests Interests"
+    "User Projects Projects"
+    ". Contributions Contributions"; 
+}
+
+.Interests { 
+  grid-area: Interests; 
+  background-color: cadetblue;
+  margin: 10px;
+}
+
+.User { 
+  grid-area: User; 
+  background-color:darkcyan;
+  margin: 10px;
+}
+
+.Projects {
+  display: grid;
+  /*grid-template-columns: 1fr 1fr 1fr;*/
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "Project1"
+    "Project2"
+    "Project3";
+  grid-area: Projects;
+  background-color: darkgray;
+  margin: 10px;
+}
+
+.Project1 { 
+  grid-area: Project1; 
+  background-color: blueviolet;
+}
+
+.Project2 { 
+  grid-area: Project2; 
+}
+
+.Project3 { 
+  grid-area: Project3; 
+}
+
+.Contributions { 
+  grid-area: Contributions; 
+  background-color: darkgreen;
+}
+
